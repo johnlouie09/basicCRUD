@@ -29,8 +29,8 @@
 <body>
     <h1 class="text-center mt-5">BASIC CRUD</h1>
     <div class="container-md mx-auto mt-5 border shadow p-5">
-        <button type="button" class="btn btn-primary mb-2 fs-5" data-bs-toggle="modal" data-bs-target="#addStudent">
-        <i class='bx bxs-file-plus'></i>
+        <button type="button" class="btn btn-primary mb-2 btn-sm" data-bs-toggle="modal" data-bs-target="#addStudent">
+        ADD STUDENT <i class='bx bxs-file-plus'></i>
         </button>
 
         <!-- show modal -->
@@ -49,17 +49,17 @@
                         <div class="modal-body">
                             
                             <div class="form-floating mb-3">
-                                <input type="text" name="fname" class="form-control" id="floatingInput"
+                                <input type="text" name="fname" class="form-control text-uppercase" id="floatingInput"
                                     placeholder="First Name">
                                 <label for="floatingInput">First Name</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" name="lname" class="form-control" id="floatingInput"
+                                <input type="text" name="lname" class="form-control text-uppercase" id="floatingInput"
                                     placeholder="Last Name">
                                 <label for="floatingInput">Last Name</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" name="dept" class="form-control" id="floatingInput"
+                                <input type="text" name="dept" class="form-control text-uppercase" id="floatingInput"
                                     placeholder="Department">
                                 <label for="floatingInput">Department</label>
                             </div>
@@ -73,7 +73,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- Table comes from datatables.net -->
         <div class="table-responsive">
             <table id="myTable" class="display">
                 <thead>
@@ -97,13 +97,13 @@
                             <td class="text-center">
                                 <?php echo $no; ?>
                             </td>
-                            <td class="text-center">
+                            <td class="text-center text-uppercase">
                                 <?php echo $row[ 'firstname' ]; ?>
                             </td>
-                            <td class="text-center">
+                            <td class="text-center text-uppercase">
                                 <?php echo $row[ 'lastname' ]; ?>
                             </td>
-                            <td class="text-center">
+                            <td class="text-center text-uppercase">
                                 <?php echo $row[ 'department' ]; ?>
                             </td>
                             <td class="text-center">
@@ -132,17 +132,17 @@
                                                 <div class="modal-body">
                                                         <input type="hidden" name="student_id" value="<?= $row[ 'id' ] ?>">
                                                     <div class="form-floating mb-3">
-                                                        <input type="text" name="first_name" class="form-control" id="floatingInput"
+                                                        <input type="text" name="first_name" class="form-control text-uppercase" id="floatingInput"
                                                             placeholder="First Name" value="<?= $row[ 'firstname' ] ?>">
                                                         <label for="floatingInput">First Name</label>
                                                     </div>
                                                     <div class="form-floating mb-3">
-                                                        <input type="text" name="last_name" class="form-control" id="floatingInput"
+                                                        <input type="text" name="last_name" class="form-control text-uppercase" id="floatingInput"
                                                             placeholder="Last Name" value="<?= $row[ 'lastname' ] ?>">
                                                         <label for="floatingInput">Last Name</label>
                                                     </div>
                                                     <div class="form-floating mb-3">
-                                                        <input type="text" name="department" class="form-control" id="floatingInput"
+                                                        <input type="text" name="department" class="form-control text-uppercase" id="floatingInput"
                                                             placeholder="Department" value="<?= $row[ 'department' ] ?>">
                                                         <label for="floatingInput">Department</label>
                                                     </div>
